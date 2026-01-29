@@ -45,7 +45,7 @@ def fit_affine_ls(df, x='x_photo', y='y_photo', X='X', Y='Y'):
     L[1::2] = YY
 
     p, *_ = np.linalg.lstsq(A, L, rcond=None)
-    return dict(a1=p[0], a2=p[1], a3=p[2], b1=p[3], b2=p[4], b3=p[5])
+    return dict(a=p[0], b=p[1], c=p[2], d=p[3], e=p[4], f=p[5])
 
 ground_path  = '/Data/ground.txt'
 gcp_pix_path = '/Data/gcp_pix.txt'
